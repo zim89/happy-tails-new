@@ -4,6 +4,7 @@ import { Lato } from 'next/font/google';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import ThemeRegistry from '@/shared/providers/ThemeRegistry';
 import './globals.css';
+import Header from '@/modules/Header';
 
 const lato = Lato({
   weight: ['400', '700'],
@@ -25,7 +26,10 @@ export default function RootLayout({
     <html lang='en'>
       <body className={lato.className}>
         <AppRouterCacheProvider>
-          <ThemeRegistry>{children}</ThemeRegistry>
+          <ThemeRegistry>
+            <Header />
+            {children}
+          </ThemeRegistry>
         </AppRouterCacheProvider>
       </body>
     </html>

@@ -1,5 +1,6 @@
 import React from 'react';
+import { Box } from '@mui/material';
 
 export default function Toys() {
-  return <div>Toys Page</div>;
+  return <Box sx={{ color: '#b2102f' }}>Toys Page</Box>;
 }
